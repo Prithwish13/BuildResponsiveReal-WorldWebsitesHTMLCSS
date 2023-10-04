@@ -24,68 +24,115 @@ FONT SIZE SYSTEM (px)
     line-height: 1;
   }
 
-  .accordion {
-    width: 700px;
+ img {
+    height: 200px;
+    border-radius: 8px;
+
+    transform: scale(1.5);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+ }
+ .carousel {
+    width: 800px;
     margin: 100px auto;
-  }
+    border-radius: 8px;
+    /* padding: 32px;
+    padding-left: 86px;
+    padding-right: 48px;
+     */
 
-.accordion{
+    padding: 32px 48px 32px 86px;
+    background-color: #087f5b;
+
     display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-
-.item {
-    box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
-    padding: 24px;
-
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    column-gap: 24px;
-    row-gap: 32px;
     align-items: center;
-}
+    gap: 86px;
 
-.number, .text {
-    font-size: 24px;
+    position: relative;
+ }
+
+.testimonial{}
+
+.testimonial-text{
+    font-size: 18px;
     font-weight: 500;
-    /* color: #087f5b; */
+    line-height: 1.5;
+    margin-bottom: 32px;
+    color: #e6fcf5;
 }
 
-.number {
-    color:  #ced4da;
+.testimonial-author{
+   font-size: 14px; 
+   margin-bottom: 4px;
+   color: #c3fae8;
 }
 
-.icon {
+.testimonial-job{
+    font-size: 12;
+    color: #c3fae8;
+}
+
+.btn{
+    background-color: #fff;
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+
+    /* centered the icon inside the button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* change the positioning of the button */
+    position: absolute;
+
+    /* positioning the button to the center */
+    top: 50%;    
+
+    box-shadow: 0 12px 24px rgba(0, 0 , 0, 0.25);
+
+    cursor: pointer;
+}
+
+.btn-left {
+    /* In relation with the parent element */
+    left: 0;
+
+    /* In relation with the element itself */
+    transform: translate(-50%, -50%);
+}
+
+.btn-right {
+    right: 0;
+    transform: translate(50%, -50%);
+
+}
+
+
+.btn-icon{
     height: 24px;
     width: 24px;
     stroke: #087f5b;
 }
 
-.hidden-box {
-    grid-column: 2;
-    display: none;
-}
-    
-.hidden-title{
- line-height: 1.6;
- margin-bottom: 24px;
-}
-.hidden-ul{
- color: #868e96;
- margin-left: 18px;
- display: flex;
- flex-direction: column;
- gap: 12px
+.dots {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 32px);
+    display: flex;
+    gap: 8px
 }
 
-.open {
-    border-top: 4px solid #087f5b;
-}
-.open .hidden-box {
-    display: block;
+.dot {
+    height: 12px;
+    width: 12px;
+    background-color: #fff;
+    border: 2px solid #087f5b;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
-.open .number, .open .text {
-    color: #087f5b;
+.dot-fill{
+    background-color: #087f5b;
 }
