@@ -63,16 +63,14 @@ FONT SIZE SYSTEM (px)
     stroke: #ebfbee;
   }
 
-  .element-selected {
-    background-color: #087f5b;
-    color: #ebfbee;
-  }
 
-  a:link {
+  a:link,
+  a:visited {
     text-decoration: none;
     display: block;    
     height: 24px;
     width: 24px;
+    color: black;
 
     border-radius: 50%;
 
@@ -80,7 +78,10 @@ FONT SIZE SYSTEM (px)
     justify-content: center;
     align-items: center;
   }
-  a:hover {
+  a:hover,
+  a:active,
+  a.element-selected
+ {
     background-color: #087f5b;
     color: #ebfbee;
   }
